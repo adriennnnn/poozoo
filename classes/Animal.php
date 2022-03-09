@@ -34,6 +34,7 @@ private function hydrate($data) {
     $this->age = $data['age'] ;
     $this->size = $data['size'] ;
     $this->weight = $data['weight'] ;
+    $this->paddockID = $data['paddock_id'] ;
     $this->isSleeping = $data['is_sleeping'] ?? 0 ;
     $this->isHungry = $data['is_hungry'] ?? 0 ;
     $this->isSick = $data['is_sick'] ?? 0 ;

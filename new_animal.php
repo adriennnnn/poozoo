@@ -6,13 +6,16 @@ $data = array(
     'size'=> $_POST['animal-size'],
     'age'=> $_POST['animal-age'],
     'weight'=> $_POST["animal-weight"],
-    'type'=> $_POST['animal-specie']
+    'type'=> $_POST['animal-specie'],
+    'paddock_id'=> $_POST['paddock-id']
 );
+// var_dump($_POST['paddock-id']);
+// die;
 switch ($data['type']) {
     case 'tiger':
     $animal = new Tiger($data);
         break;
-    case 'fich':
+    case 'fish':
     $animal = new Fish($data);
         break;
             case 'eagle':
@@ -25,3 +28,5 @@ switch ($data['type']) {
 $employee = new Employee;
 
 $employee->createAnimal($animal);
+
+header('location: /index.php');
